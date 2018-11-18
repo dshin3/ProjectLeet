@@ -1,5 +1,8 @@
 public class SolutionA
 {
+       //See Leet code problem 807 for more information.
+       //Time complexity is O(a*b) where a and b are the dimensions of the grid.
+       //The memory complexity is O(a) + O(b) where a and b are the length of the dimensions of the grid.
 
 	public static int maxIncreaseKeepingSkyline(int[][] grid) {
 		int[] rowMaxArray = new int[grid.length];
@@ -34,28 +37,17 @@ public class SolutionA
 			}
 		}
 		
-		
-		//System.out.println("RowMax:\n");
-		for(int k = 0;k<grid.length;k++)
-		{
-			//System.out.println(rowMaxArray[k]);
-		}
-		
-		//System.out.println("colMax:\n");
-		for(int k = 0;k<grid.length;k++)
-		{
-			//System.out.println(colMaxArray[k]);
-		}
-		
+	        //going through the grid again and computing the additional height differentials and 
+                //adding it to sum.	
 		for(int c =0;c<grid.length;c++)
 		{
 			for(int d =0;d<grid[0].length;d++)
 			{
+                               //Used minimum function to get the lesser of the two numbers.
 				minVal = Math.min(rowMaxArray[c], colMaxArray[d]);
 				if(grid[c][d]< minVal)
 				{
 					sum += minVal - grid[c][d];
-					//System.out.print("sum: "+sum+"\n");
 				}
 			}
 		}
@@ -70,7 +62,6 @@ public class SolutionA
 				{9,2,6,3},
 				{0,3,1,0}
 		};
-
 
 		int ans = maxIncreaseKeepingSkyline(grid);
 		System.out.println(ans);
