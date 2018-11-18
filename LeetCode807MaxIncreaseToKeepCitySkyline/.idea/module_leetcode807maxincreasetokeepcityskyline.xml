@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_leetcode807maxincreasetokeepcityskyline" default="compile.module.leetcode807maxincreasetokeepcityskyline">
+  <dirname property="module.leetcode807maxincreasetokeepcityskyline.basedir" file="${ant.file.module_leetcode807maxincreasetokeepcityskyline}"/>
+  
+  <property name="module.jdk.home.leetcode807maxincreasetokeepcityskyline" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.leetcode807maxincreasetokeepcityskyline" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.leetcode807maxincreasetokeepcityskyline" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.leetcode807maxincreasetokeepcityskyline" value="-encoding UTF-8 -source 10 -target 10 ${compiler.args}"/>
+  
+  <property name="leetcode807maxincreasetokeepcityskyline.output.dir" value="undefined"/>
+  <property name="leetcode807maxincreasetokeepcityskyline.testoutput.dir" value="undefined"/>
+  
+  <path id="leetcode807maxincreasetokeepcityskyline.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="leetcode807maxincreasetokeepcityskyline.module.production.classpath">
+    <path refid="${module.jdk.classpath.leetcode807maxincreasetokeepcityskyline}"/>
+  </path>
+  
+  <path id="leetcode807maxincreasetokeepcityskyline.runtime.production.module.classpath"/>
+  
+  <path id="leetcode807maxincreasetokeepcityskyline.module.classpath">
+    <path refid="${module.jdk.classpath.leetcode807maxincreasetokeepcityskyline}"/>
+  </path>
+  
+  <path id="leetcode807maxincreasetokeepcityskyline.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.leetcode807maxincreasetokeepcityskyline">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.leetcode807maxincreasetokeepcityskyline">
+    <patternset refid="excluded.from.module.leetcode807maxincreasetokeepcityskyline"/>
+  </patternset>
+  
+  
+  <target name="compile.module.leetcode807maxincreasetokeepcityskyline" depends="compile.module.leetcode807maxincreasetokeepcityskyline.production,compile.module.leetcode807maxincreasetokeepcityskyline.tests" description="Compile module LeetCode807MaxIncreaseToKeepCitySkyline"/>
+  
+  <target name="compile.module.leetcode807maxincreasetokeepcityskyline.production" depends="register.custom.compilers" description="Compile module LeetCode807MaxIncreaseToKeepCitySkyline; production classes"/>
+  
+  <target name="compile.module.leetcode807maxincreasetokeepcityskyline.tests" depends="register.custom.compilers,compile.module.leetcode807maxincreasetokeepcityskyline.production" description="compile module LeetCode807MaxIncreaseToKeepCitySkyline; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.leetcode807maxincreasetokeepcityskyline" description="cleanup module">
+    <delete dir="${leetcode807maxincreasetokeepcityskyline.output.dir}"/>
+    <delete dir="${leetcode807maxincreasetokeepcityskyline.testoutput.dir}"/>
+  </target>
+</project>
